@@ -11,6 +11,7 @@ public class Cicli {
     }
 
     /**
+     * @author Emanuele Zicola
      * Metodo che stampa i numeri da zero fino a maxRange
      * @param maxRange il tetto massimo escluso a cui stampare
      */
@@ -25,6 +26,7 @@ public class Cicli {
     }
 
     /**
+     * @author Emanuele Zicola
      * Metodo che stampa i numeri da zero fino a maxRange
      * @param maxRange il tetto massimo incluso a cui stampare
      */
@@ -40,6 +42,7 @@ public class Cicli {
 
 
     /**
+     * @author Emanuele Zicola
      * Metodo che stampa i numeri da x fino a 0
      * @param startNumber il tetto massimo escluso a cui stampare
      */
@@ -55,6 +58,7 @@ public class Cicli {
 
 
     /**
+     * @author Gabriele Maferri
      * Metodo che stampa i numeri da StartNumber fino a 0 incluso
      * @param startNumber numero di partenza
      */
@@ -69,6 +73,7 @@ public class Cicli {
     }
 
     /**
+     * @author Gabriele Maferri
      * Metodo che stampa i numeri da X a Y a crescere
      * @param xNumber Numero di partenza
      * @param yNumber Numero di fine
@@ -84,6 +89,7 @@ public class Cicli {
     }
 
     /**
+     * @author Gabriele Maferri
      * Metodo che stampa i numeri da X a Y a decrescere
      * @param xNumber numero di partenza
      * @param yNumber numero di fine
