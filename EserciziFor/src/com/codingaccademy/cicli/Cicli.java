@@ -1,7 +1,5 @@
 package com.codingaccademy.cicli;
 
-import javax.swing.*;
-
 public class Cicli {
 
     private static final String ERROR_NUMBER_GREATER_THAN_ZERO = "Il metodo accetta solo numeri maggiori di zero";
@@ -40,7 +38,6 @@ public class Cicli {
         }
     }
 
-
     /**
      * @author Emanuele Zicola
      * Metodo che stampa i numeri da x fino a 0
@@ -55,7 +52,6 @@ public class Cicli {
             System.out.println(i);
         }
     }
-
 
     /**
      * @author Gabriele Maferri
