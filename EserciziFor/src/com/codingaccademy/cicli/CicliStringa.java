@@ -37,6 +37,11 @@ public class CicliStringa {
      * @return la posizione del carattere, -1 se non lo trova.
      */
     public static int getPosizionePrimaOccorrenzaCarattereInStringa(String inputString, char c) {
+        //Se null esco e stampo messaggio errore
+        if (Objects.isNull(inputString)) {
+            return -1;
+        }
+
         for (int i = 0; i < inputString.length(); i++) {
             if (inputString.charAt(i) == c) {
                 return i;
