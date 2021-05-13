@@ -9,10 +9,10 @@ public class CicliStringa {
     }
 
     /**
-     * @author Emanuele Zicola
-     *
-     * Metodo che prende in input una stringa e ne stampa i caratteri uno ad uno
      * @param inputString la stringa da cui prendere i caratteri
+     * @author Emanuele Zicola
+     * <p>
+     * Metodo che prende in input una stringa e ne stampa i caratteri uno ad uno
      */
     public static void stampaCaratteriStringa(String inputString) {
         //Se null esco e stampo messaggio errore
@@ -30,11 +30,11 @@ public class CicliStringa {
     }
 
     /**
+     * @param inputString la stringa da scorrere
+     * @param c           il carattere da trovare
+     * @return la posizione del carattere, -1 se non lo trova.
      * @author Emanuele Zicola
      * Metodo che stampa la posizione del carattere nella stringa. Se il carattere non viene trovato, stampa -1
-     * @param inputString la stringa da scorrere
-     * @param c il carattere da trovare
-     * @return la posizione del carattere, -1 se non lo trova.
      */
     public static int getPosizionePrimaOccorrenzaCarattereInStringa(String inputString, char c) {
         //Se null esco e stampo messaggio errore
@@ -51,24 +51,24 @@ public class CicliStringa {
     }
 
     /**
-     * @author Daniel Minghini
      * @param stringaInput stringa in input
-     * @param carattere carattere in input
+     * @param carattere    carattere in input
      * @return ritorna -1 se la stringa è null, altrimenti il numero di occorrenze di un carattere
      * all'interno della stringa
+     * @author Daniel Minghini
      */
     //metodo che prende una stringa e un carattere e stampa quante occorrenze ci sono di quel carattere
     //all'interno della stringa
-    public static int stampaNumeroOccorrenzeCarattereInUnaStringa(String stringaInput, char carattere){
+    public static int stampaNumeroOccorrenzeCarattereInUnaStringa(String stringaInput, char carattere) {
         //controllo se la stringa è null
-        if(Objects.isNull(stringaInput)){
+        if (Objects.isNull(stringaInput)) {
             System.out.println("Stringa non valida");
             return -1;
         }
 
-        int count=0;
-        for(int i=0; i < stringaInput.length(); i++ ){
-            if(stringaInput.charAt(i) == carattere){
+        int count = 0;
+        for (int i = 0; i < stringaInput.length(); i++) {
+            if (stringaInput.charAt(i) == carattere) {
                 count++;
             }
         }
@@ -76,39 +76,39 @@ public class CicliStringa {
     }
 
     /**
-     * @author Daniel Minghini
      * @param stringaInput stringa in input
-     * stampa una stringa al contrario
+     *                     stampa una stringa al contrario
+     * @author Daniel Minghini
      */
     //metodo che stampa una stringa al contrario
-    public static void stampaUnaStringaAlContrario(String stringaInput){
+    public static void stampaUnaStringaAlContrario(String stringaInput) {
         //controllo se la stringa è null
-        if(Objects.isNull(stringaInput)){
+        if (Objects.isNull(stringaInput)) {
             System.out.println("Stringa non valida");
             return;
         }
 
-        for(int i = stringaInput.length() - 1; i >= 0; i--){
+        for (int i = stringaInput.length() - 1; i >= 0; i--) {
             System.out.print(stringaInput.charAt(i));
         }
     }
 
     /**
-     * @author Daniel Minghini
-     * metodo che torna true se trova una sottostringa all'interno di una stringa, altrimenti false
      * @param stringaInput
      * @param substring
      * @return true se la sottostringa esiste nella stringa input, altrimenti false
+     * @author Daniel Minghini
+     * metodo che torna true se trova una sottostringa all'interno di una stringa, altrimenti false
      */
     //metodo che torna true se trova una sottostringa all'interno di una stringa, altrimenti false
-    public static boolean stringContainsSubstring(String stringaInput, String substring){
+    public static boolean stringContainsSubstring(String stringaInput, String substring) {
         //controllo se la stringa è null
-        if(Objects.isNull(stringaInput)){
+        if (Objects.isNull(stringaInput)) {
             System.out.println("Stringa non valida");
             return false;
         }
         //controllo se la substring è null
-        if(Objects.isNull(substring)){
+        if (Objects.isNull(substring)) {
             System.out.println("Sottostringa non valida");
             return false;
         }
@@ -116,5 +116,52 @@ public class CicliStringa {
         return stringaInput.contains(substring);
     }
 
+    /**
+     * @author Daniel Minghini
+     * metodo che controlla se la stringa è palindroma(paraculata)
+     * @param stringaInput
+     * @return true se la stringa è palindroma, altrimenti false
+     */
+    public static boolean isPalindromaNonOttimizzata(String stringaInput) {
+        //controllo se la stringa è null
+        if (Objects.isNull(stringaInput)) {
+            System.out.println("Stringa non valida");
+            return false;
+        }
 
+        StringBuilder stringaInversa = new StringBuilder();
+        for (int i = stringaInput.length() - 1; i >= 0; i--) {
+            stringaInversa.append(stringaInput.charAt(i));
+        }
+
+        return stringaInput.equals(stringaInversa.toString());
+    }
+
+    /**
+     * @author Daniel Minghini
+     * metodo che controlla se una stringa è palindroma (non paraculata)
+     * @param stringaInput
+     * @return
+     */
+    public static boolean isPalindromaOttimizzata(String stringaInput) {
+        //controllo se la stringa è null
+        if (Objects.isNull(stringaInput)) {
+            System.out.println("Stringa non valida");
+            return false;
+        }
+
+        stringaInput = stringaInput.toLowerCase().replace(" ", "");
+
+        int indiceSale = 0;
+        int indiceScende = stringaInput.length() - 1;
+
+        while (indiceSale < indiceScende) {
+            if (stringaInput.charAt(indiceSale) != stringaInput.charAt(indiceScende)) {
+                return false;
+            }
+            indiceSale++;
+            indiceScende--;
+        }
+        return true;
+    }
 }
