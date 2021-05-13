@@ -50,6 +50,71 @@ public class CicliStringa {
         return -1;
     }
 
+    /**
+     * @author Daniel Minghini
+     * @param stringaInput stringa in input
+     * @param carattere carattere in input
+     * @return ritorna -1 se la stringa è null, altrimenti il numero di occorrenze di un carattere
+     * all'interno della stringa
+     */
+    //metodo che prende una stringa e un carattere e stampa quante occorrenze ci sono di quel carattere
+    //all'interno della stringa
+    public static int stampaNumeroOccorrenzeCarattereInUnaStringa(String stringaInput, char carattere){
+        //controllo se la stringa è null
+        if(Objects.isNull(stringaInput)){
+            System.out.println("Stringa non valida");
+            return -1;
+        }
+
+        int count=0;
+        for(int i=0; i < stringaInput.length(); i++ ){
+            if(stringaInput.charAt(i) == carattere){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    /**
+     * @author Daniel Minghini
+     * @param stringaInput stringa in input
+     * stampa una stringa al contrario
+     */
+    //metodo che stampa una stringa al contrario
+    public static void stampaUnaStringaAlContrario(String stringaInput){
+        //controllo se la stringa è null
+        if(Objects.isNull(stringaInput)){
+            System.out.println("Stringa non valida");
+            return;
+        }
+
+        for(int i = stringaInput.length() - 1; i >= 0; i--){
+            System.out.print(stringaInput.charAt(i));
+        }
+    }
+
+    /**
+     * @author Daniel Minghini
+     * metodo che torna true se trova una sottostringa all'interno di una stringa, altrimenti false
+     * @param stringaInput
+     * @param substring
+     * @return true se la sottostringa esiste nella stringa input, altrimenti false
+     */
+    //metodo che torna true se trova una sottostringa all'interno di una stringa, altrimenti false
+    public static boolean stringContainsSubstring(String stringaInput, String substring){
+        //controllo se la stringa è null
+        if(Objects.isNull(stringaInput)){
+            System.out.println("Stringa non valida");
+            return false;
+        }
+        //controllo se la substring è null
+        if(Objects.isNull(substring)){
+            System.out.println("Sottostringa non valida");
+            return false;
+        }
+
+        return stringaInput.contains(substring);
+    }
 
 
 }
