@@ -142,7 +142,7 @@ public class CicliStringa {
      * @author Daniel Minghini
      * metodo che controlla se una stringa è palindroma (non paraculata)
      * @param stringaInput la stringa in input
-     * @return
+     * @return true se la stringa è palindroma, false viceversa
      */
     public static boolean isPalindromaOttimizzata(String stringaInput) {
         //controllo se la stringa è null
