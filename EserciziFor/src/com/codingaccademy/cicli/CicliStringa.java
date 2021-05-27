@@ -168,6 +168,33 @@ public class CicliStringa {
 
 
     /**
+     * @author Gabriele Maferri
+     * Metodo che controlla che una stringa sia palindroma.
+     * Viene fatto con il for
+     * @param inputString la stringa da controllare
+     * @return true se la stringa è palindroma, false se null, vuota o non palindroma
+     */
+    public boolean isPalindromaConFor (String inputString) {
+        if (inputString == null) {
+            System.out.println("Inserisci un'altra stringa");
+            return false;
+        }
+
+        int y = inputString.length()-1;
+        for (int i = 0; i < inputString.length(); i++) {
+            if (i >= y) {
+                return true;
+            }
+            if (inputString.charAt(i) != inputString.charAt(y)){
+                return false;
+            }
+            y--;
+        }
+        return false;
+    }
+
+
+    /**
      * @author Emanuele Zicola
      * Metodo che stampa le occorrenze di tutti i caratteri di una stringa in ordine alfabetico
      * @param inputString la stringa da analizzare.
