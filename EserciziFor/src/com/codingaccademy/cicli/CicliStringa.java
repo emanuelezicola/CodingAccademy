@@ -58,8 +58,6 @@ public class CicliStringa {
      * all'interno della stringa
      * @author Daniel Minghini
      */
-    //metodo che prende una stringa e un carattere e stampa quante occorrenze ci sono di quel carattere
-    //all'interno della stringa
     public static int stampaNumeroOccorrenzeCarattereInUnaStringa(String stringaInput, char carattere) {
         //controllo se la stringa è null
         if (Objects.isNull(stringaInput)) {
@@ -81,7 +79,6 @@ public class CicliStringa {
      *                     stampa una stringa al contrario
      * @author Daniel Minghini
      */
-    //metodo che stampa una stringa al contrario
     public static void stampaUnaStringaAlContrario(String stringaInput) {
         //controllo se la stringa è null
         if (Objects.isNull(stringaInput)) {
@@ -101,7 +98,6 @@ public class CicliStringa {
      * @author Daniel Minghini
      * metodo che torna true se trova una sottostringa all'interno di una stringa, altrimenti false
      */
-    //metodo che torna true se trova una sottostringa all'interno di una stringa, altrimenti false
     public static boolean stringContainsSubstring(String stringaInput, String substring) {
         //controllo se la stringa è null
         if (Objects.isNull(stringaInput)) {
